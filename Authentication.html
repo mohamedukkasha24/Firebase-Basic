@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Authentication</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f2f2f2;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+      
+        section {
+          background-color: #ffffff;
+          padding: 2rem;
+          border-radius: 12px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          min-width: 300px;
+        }
+      
+        h2 {
+          text-align: center;
+          margin-bottom: 1rem;
+        }
+      
+        div {
+          margin-bottom: 1rem;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+      
+        input[type="email"],
+        input[type="password"] {
+          width: 100%;
+          padding: 0.6rem;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          font-size: 1rem;
+        }
+      
+        button {
+          padding: 0.6rem 1rem;
+          border: none;
+          border-radius: 6px;
+          background-color: #007bff;
+          color: white;
+          font-size: 1rem;
+          cursor: pointer;
+          margin-right: 0.5rem;
+          transition: background-color 0.3s ease;
+        }
+      
+        button:hover {
+          background-color: #0056b3;
+        }
+      
+        #message {
+          margin-top: 1rem;
+          color: green;
+          font-weight: bold;
+          text-align: center;
+        }
+        #message2 {
+          margin-top: 1rem;
+          color: red;
+          font-weight: bold;
+          text-align: center;
+        }
+      
+        @media (max-width: 500px) {
+          body {
+            padding: 1rem;
+          }
+      
+          section {
+            width: 100%;
+          }
+        }
+      </style>
+      
+</head>
+
+<body>
+    <h2>Firebase Authentication</h2>
+    <section id="SignInsection">
+        <div>
+            User Email : <input type="email" name="txt_userEmail" id="txt_userEmail" autocomplete="off">
+        </div>
+        <div>
+            Password : <input type="password" name="txt_userPassword" id="txt_userPassword" autocomplete="off">
+        </div>
+        <div>
+            <button type="submit" id="btn_create">Create Account</button>
+            <button type="submit" id="btn_signIn">SignIn</button>
+        </div>
+        <p id="message"></p>
+        <p id="message2"></p>
+    </section>
+    <section id="SignOutsection" hidden>
+        <button type="submit" id="btn_signOut">Sign Out</button>
+    </section>
+    <script type="module" src="Authentication.js"></script>
+</body>
+
+</html>
