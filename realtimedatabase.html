@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Firebase-Real Time Database</title>
+     <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            padding: 2rem;
+          }
+        
+          h1 {
+            text-align: center;
+            color: #00bcd4;
+            margin-bottom: 2rem;
+          }
+        
+          form {
+            background-color: #222;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+          }
+        
+          form div {
+            margin-bottom: 1rem;
+          }
+        
+          input[type="text"],
+          input[type="number"] {
+            width: 100%;
+            padding: 0.6rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+          }
+        
+          button[type="submit"] {
+            width: 100%;
+            padding: 0.7rem;
+            background-color: #00bcd4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        
+          button[type="submit"]:hover {
+            background-color: #0097a7;
+          }
+        
+          #tablesection {
+            margin-top: 3rem;
+            text-align: center;
+          }
+        
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #222;
+            color: #fff;
+            margin-top: 1rem;
+          }
+        
+          th,
+          td {
+            padding: 0.8rem;
+            border: 1px solid #444;
+            text-align: center;
+          }
+        
+          th {
+            background-color: #00bcd4;
+            color: #111;
+          }
+        
+          td button {
+            background-color: #f44336;
+            border: none;
+            padding: 6px 12px;
+            color: white;
+            border-radius: 4px;
+            margin: 0 4px;
+            cursor: pointer;
+          }
+        
+          td button:hover {
+            background-color: #d32f2f;
+          }
+        
+          td button:first-child {
+            background-color: #4caf50;
+          }
+        
+          td button:first-child:hover {
+            background-color: #388e3c;
+          }
+        </style>
+        
+     <script type="module" src="realtimedatabase.js"></script>
+</head>
+
+<body>
+     <h1>Firebase-RealTime Database</h1>
+
+     <div class="overlay"></div>
+     <form action="" id="userForm" autocomplete="off">
+          <div>
+               User Name : <input type="text" name="txt_userName" id="txt_userName">
+
+          </div><br>
+
+          <div>
+               User Age : <input type="number" name="txt_userAge" id="txt_userAge">
+
+          </div><br>
+
+          <div>
+               Father's Name : <input type="text" name="txt_userFatherName" id="txt_userFatherName">
+
+          </div><br>
+
+          <div>
+               Mother's Name : <input type="text" name="txt_userMotherName" id="txt_userMotherName">
+
+          </div><br>
+          <div>
+               <button type="submit">Save</button>
+          </div>
+     </form>
+
+     <section hidden id="tablesection" >
+          <table style="color: white;font-weight: bold;">
+               <thead>
+                    <tr>
+                         <th>S.No</th>
+                         <th>Name</th>
+                         <th>Age</th>
+                         <th>Mother Name</th>
+                         <th>Father Name</th>
+                         <th>Option</th>
+                    </tr>
+               </thead>
+               <tbody id="userTableBody">
+
+               </tbody>
+          </table>
+     </section>
+
+</body>
+
+</html>
