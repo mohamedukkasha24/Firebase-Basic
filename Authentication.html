@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Authentication</title>
+    <link rel="stylesheet" href="Authentication.css">
+</head>
+
+<body>
+    <h2>Firebase Authentication</h2>
+    <section id="SignInsection">
+        <div>
+            User Email : <input type="email" name="txt_userEmail" id="txt_userEmail" autocomplete="off">
+        </div>
+        <div>
+            Password : <input type="password" name="txt_userPassword" id="txt_userPassword" autocomplete="off">
+        </div>
+        <div>
+            <button type="submit" id="btn_create">Create Account</button>
+            <button type="submit" id="btn_signIn">SignIn</button>
+        </div>
+        <p id="message"></p>
+        <p id="message2"></p>
+    </section>
+    <section id="SignOutsection" hidden>
+        <button type="submit" id="btn_signOut">Sign Out</button>
+    </section>
+    <script type="module" src="Authentication.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firebase-Real Time Database</title>
+  <link rel="stylesheet" href="realtimedatabase.css">
+  <script type="module" src="realtimedatabase.js"></script>
+</head>
+
+<body>
+  <h1>Firebase-RealTime Database</h1>
+  <h6 id="messageshown" hidden>message content show</h6>
+  <div class="overlay"></div>
+  <form action="" id="userForm" autocomplete="off">
+    <div>
+      User Name : <input type="text" name="txt_userName" id="txt_userName">
+
+    </div><br>
+
+    <div>
+      User Age : <input type="number" name="txt_userAge" id="txt_userAge">
+
+    </div><br>
+
+    <div>
+      Father's Name : <input type="text" name="txt_userFatherName" id="txt_userFatherName">
+
+    </div><br>
+
+    <div>
+      Mother's Name : <input type="text" name="txt_userMotherName" id="txt_userMotherName">
+
+    </div><br>
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+
+  <section hidden id="tablesection">
+    <table style="color: white;font-weight: bold;">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Mother Name</th>
+          <th>Father Name</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody id="userTableBody">
+
+      </tbody>
+    </table>
+  </section>
+
+</body>
+
+</html>
